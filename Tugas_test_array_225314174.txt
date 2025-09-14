@@ -1,8 +1,7 @@
 //Hasil Tugas
-fun fibonacci(angka: Int, angka2: Int, maks: Int): List<Int> {
-    //buat dalam list of integer
-    val fibonacciList = mutableListOf(angka, angka2)
-    
+fun fibonacci(angka1: Int, angka2: Int, maks: Int): List<Int> {
+    val fibonacciList = mutableListOf(angka1, angka2)
+
     while (true) {
         val nextNumber = fibonacciList[fibonacciList.size - 1] + fibonacciList[fibonacciList.size - 2]
         if (nextNumber > maks) {
@@ -10,15 +9,14 @@ fun fibonacci(angka: Int, angka2: Int, maks: Int): List<Int> {
         }
         fibonacciList.add(nextNumber)
     }
-    
+
     println("Deret Fibonacci: $fibonacciList")
     return fibonacciList
 }
 
 fun main(args: Array<String>){
-    fibonacci(1, 3, 100)
+    fibonacci(0, 1, 100)
 }
-
 
 fun text_to_array(text: String): Array<String> {
     val wordsArray = text.split(" ").toTypedArray()
@@ -29,3 +27,4 @@ fun text_to_array(text: String): Array<String> {
 fun main(args: Array<String>){
     text_to_array("Hari senin saya belajar kotlin")
 }
+
